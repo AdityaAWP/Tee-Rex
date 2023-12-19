@@ -143,12 +143,12 @@
 
     <script>
       // Fetch and include the header content
-      fetch("../templates/navbar.html")
+      fetch("../components/navbar.html")
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("headerContainer").innerHTML = html;
         });
-      fetch("../templates/footer.html")
+      fetch("../components/footer.html")
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("footer").innerHTML = html;
