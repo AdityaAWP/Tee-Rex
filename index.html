@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to the head of your HTML file -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-bottom: 20px;
+        font-family: "Montserrat";
+      }
+    </style>
+    <!-- Add this before the closing body tag -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Tee Rex</title>
+  </head>
+  <body>
+    <div id="headerContainer"></div>
+    <div id="jumbotron"></div>
+    <div id="item"></div>
+    <div id="footer"></div>
+
+    <!-- Rest of your content here -->
+
+    <script>
+      // Fetch and include the header content
+      fetch("templates/navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("headerContainer").innerHTML = html;
+        });
+
+      fetch("components/jumbotron.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("jumbotron").innerHTML = html;
+        });
+      fetch("components/itemlist.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("item").innerHTML = html;
+        });
+      fetch("templates/footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        });
+      //   console.log(window.scrollY);
+    </script>
+  </body>
+</html>

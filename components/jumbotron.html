@@ -1,0 +1,45 @@
+<div class="jumbotron dark-jumbotron">
+  <h1 class="display-1">Tee Rex</h1>
+  <p class="display-6">The Indonesian Beauty on Your Tee</p>
+  <button type="button"><a href="">Shop Now</a></button>
+</div>
+
+<style>
+  /* styles.css */
+
+  @font-face {
+    font-family: "PPE";
+    src: url("../fonts/PPEditorialNew-Regular.otf") format("opentype");
+  }
+
+  .jumbotron {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../assets/banner.jpg") center / cover no-repeat;
+    /* background: url("../assets/banner.jpg") center / cover no-repeat; */
+    color: white; /* Text color */
+    text-align: center; /* Center text horizontally */
+    height: 100vh;
+    padding-top: 300px;
+  }
+  .display-1 {
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    font-family: "PPE", sans-serif;
+  }
+  .display-6 {
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  }
+  button {
+    background-color: green;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  @media (max-width: 600px) {
+    .display-6 {
+      font-size: 20px;
+    }
+  }
+</style>

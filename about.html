@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to the head of your HTML file -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-bottom: 20px;
+        font-family: "Montserrat";
+      }
+
+      .title-shop {
+        padding-top: 130px;
+        padding-bottom: 20px;
+        background-color: #f7f7f7;
+      }
+      .card {
+        border: none;
+      }
+      .card img {
+        width: 20rem;
+        display: block;
+        margin: auto; /* Center the image horizontally */
+      }
+      .content p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 2;
+        letter-spacing: 0.7px;
+      }
+      @media (max-width: 600px) {
+        .card img {
+          width: 15rem;
+          display: block;
+          margin: auto; /* Center the image horizontally */
+        }
+        .content p {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          line-height: 1.5;
+          letter-spacing: 0;
+          text-align: left;
+        }
+      }
+    </style>
+    <!-- Add this before the closing body tag -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Tee Rex</title>
+  </head>
+
+  <body>
+    <div id="headerContainer"></div>
+    <div class="container-fluid title-shop">
+      <h4 class="text-center fw-bold">WHO ARE WE???</h4>
+    </div>
+    <div class="card">
+      <img src="assets/logo.png" alt="" />
+      <h1 class="text-center fw-bold py-5">Tee Rex</h1>
+    </div>
+    <div class="content">
+      <p>
+        Welcome to Tee Rex, where creativity meets culture, and every design
+        tells a story. We are more than just a clothing line; we are a vibrant
+        community that celebrates the diverse beauty of Indonesia through
+        wearable art. At Tee Rex, we envision a platform where the rich tapestry
+        of Indonesian culture comes to life. We are passionate about providing a
+        space for talented designers to express their creativity, showcasing the
+        unique traditions, landscapes, and stories that make Indonesia
+        extraordinary. We believe that creativity knows no bounds, and that's
+        why we invite designers from all walks of life to join us. Whether
+        you're an established artist or a budding creator, Tee Rex is your
+        canvas. Express the beauty of Indonesia through your lens, and let your
+        designs become a part of our cultural tapestry.For our customers, Tee
+        Rex offers more than just apparel. When you wear our designs, you're not
+        just wearing a garment; you're embracing a story. Each piece carries the
+        spirit of Indonesia – from the intricate Batik patterns to the majestic
+        Komodo dragons and the timeless beauty of Toraja houses. Become a part
+        of our growing community that appreciates the beauty, diversity, and
+        creativity rooted in Indonesian culture. Whether you're a designer, a
+        customer, or simply someone who loves wearing meaningful apparel,Tee Rex
+        welcomes you to join our movement. At Tee Rex, we don't just sell
+        clothes; we tell stories. Join us in celebrating the essence of
+        Indonesia, one design at a time. Tee Rex - The Indonesian Beauty on Your
+        Tee
+      </p>
+    </div>
+    <div id="footer"></div>
+
+    <!-- Rest of your content here -->
+
+    <script>
+      // Fetch and include the header content
+      fetch("templates/navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("headerContainer").innerHTML = html;
+        });
+      fetch("templates/footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        });
+    </script>
+  </body>
+</html>

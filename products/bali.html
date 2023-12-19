@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to the head of your HTML file -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-bottom: 20px;
+        font-family: "Montserrat";
+      }
+      .product {
+        padding-top: 200px;
+      }
+      .card {
+        width: 25rem;
+        border: none;
+      }
+      .full img {
+        width: 40rem;
+      }
+      .size img {
+        margin-top: 20px;
+        width: 30rem;
+      }
+      button {
+        background-color: #ee4d2d;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 2px 2px 5px black;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .material {
+        padding-top: 40px;
+      }
+      @media (max-width: 600px) {
+        .product {
+          padding-top: 130px;
+        }
+        h3 {
+          margin: 40px 0px 20px 0px;
+          text-align: center;
+        }
+        .desc {
+          text-align: center;
+          font-size: 14px;
+        }
+        .desc p {
+          text-align: left;
+        }
+        .material {
+          padding-top: 10px;
+        }
+        .card {
+          width: 20rem;
+        }
+        .full img {
+          width: 20rem;
+        }
+        .size img {
+          margin-top: 20px;
+          width: 15rem;
+        }
+      }
+      @media (min-width: 801px) and (max-width: 1021px) {
+        .card {
+          width: 20rem;
+        }
+        .full img {
+          width: 30rem;
+        }
+        .size img {
+          margin-top: 20px;
+          width: 20rem;
+        }
+      }
+    </style>
+    <!-- Add this before the closing body tag -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Tee Rex</title>
+  </head>
+  <body>
+    <div id="headerContainer"></div>
+    <div class="container product">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="">
+            <div class="card mx-auto">
+              <img
+                src="../assets/kintamani_bali/Backblack.png"
+                class="card-img-top"
+                alt=""
+              />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 desc">
+          <h3 class="fw-bold">Kintamani-Bali</h3>
+          <h5>Rp 165K</h5>
+          <h6 class="fw-bold material">Material : Cotton Combed 24s</h6>
+          <h5 class="fw-bold pt-3">The Story :</h5>
+          <p>
+            Discover a stunning depiction of the Kintamani landscape. The iconic
+            Mount Batur majestically rises, surrounded by lush greenery and the
+            serene Lake Batur. The intricate detailing captures the essence of
+            this volcanic paradise, inviting wearers to immerse themselves in
+            the tranquility of Kintamani.The color palette is inspired by the
+            natural hues of Kintamani. Deep greens evoke the lush forests, while
+            earthy tones represent the volcanic soil. Accents of vibrant blues
+            and oranges mirror the reflective surfaces of Lake Batur and the
+            warmth of the Balinese sun.
+          </p>
+          <button type="button">
+            <a href="https://shp.ee/nwkyq8v">Shoppe</a>
+          </button>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+      <div class="row">
+        <div class="col-md-12 full text-center">
+          <img src="../assets/kintamani_bali/Backblack.png" alt="" />
+          <img src="../assets/kintamani_bali/back.png" alt="" />
+          <img src="../assets/indonesia_elgance/Frontblack.png" alt="" />
+          <img src="../assets/indonesia_elgance/Front.png" alt="" />
+        </div>
+        <div class="col-md-12 size text-center">
+          <img src="../assets/sizechart.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <!-- Rest of your content here -->
+
+    <script>
+      // Fetch and include the header content
+      fetch("../templates/navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("headerContainer").innerHTML = html;
+        });
+      fetch("../templates/footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        });
+      //   console.log(window.scrollY);
+    </script>
+  </body>
+</html>

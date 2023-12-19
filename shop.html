@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to the head of your HTML file -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-bottom: 20px;
+        font-family: "Montserrat";
+      }
+      .title-shop {
+        padding-top: 130px;
+        padding-bottom: 20px;
+        background-color: #f7f7f7;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .itemList {
+        margin-top: 50px;
+      }
+      .title {
+        padding-bottom: 25px;
+        text-decoration: underline;
+        font-family: "PPE", sans-serif;
+      }
+      .card {
+        border: none;
+      }
+      .darken-on-hover {
+        transition: filter 0.3s ease-in-out;
+      }
+      .darken-on-hover:hover {
+        filter: brightness(70%);
+      }
+      .card {
+        width: 17rem;
+      }
+      @media (max-width: 600px) {
+        .card {
+          width: 15rem;
+        }
+        .card-title,
+        .card-text {
+          font-size: 15px;
+        }
+
+        .itemList {
+          margin-top: 0;
+        }
+        .title {
+          padding-bottom: 0;
+        }
+      }
+    </style>
+    <!-- Add this before the closing body tag -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Tee Rex</title>
+  </head>
+  <body>
+    <div id="headerContainer"></div>
+    <div class="container-fluid title-shop">
+      <h4 class="text-center fw-bold">SHOP</h4>
+    </div>
+    <div class="container itemList text-center">
+      <div class="row row-cols-1 row-cols-lg-3 mt-5 justify-content-md-center">
+        <div class="col-md-4 mb-4">
+          <a href="products/raja_ampat.html">
+            <div class="card mx-auto">
+              <img
+                src="assets/Rajaampat_papua/Backblack.png"
+                class="card-img-top darken-on-hover"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Raja Ampat-Papua</h5>
+                <p class="card-text">RP 165K</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col mb-4">
+          <a href="products/elegance.html">
+            <div class="card mx-auto">
+              <img
+                src="assets/indonesia_elgance/Back.png"
+                class="card-img-top darken-on-hover"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Indonesia Elegance</h5>
+                <p class="card-text">RP 165K</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col mb-4">
+          <a href="products/toraja.html">
+            <div class="card mx-auto">
+              <img
+                src="assets/Tanatoraja_sulawesi/Backblack.png"
+                class="card-img-top darken-on-hover"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tana Toraja-Sulawesi</h5>
+                <p class="card-text">RP 165K</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-3 mt-5 justify-content-md-center">
+        <div class="col-md-4 mb-4">
+          <a href="products/bali.html">
+            <div class="card mx-auto">
+              <img
+                src="assets/kintamani_bali/back.png"
+                class="card-img-top darken-on-hover"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kintamani-Bali</h5>
+                <p class="card-text">RP 165K</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col mb-4">
+          <a href="products/borneo.html">
+            <div class="card mx-auto">
+              <img
+                src="assets/Borneo_kalimantan/Backblack.png"
+                class="card-img-top darken-on-hover"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Borneo-Kalimantan</h5>
+                <p class="card-text">RP 165K</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col mb-4">
+          <a href="products/ntt.html">
+            <div class="card mx-auto">
+              <img
+                src="assets/Komodo_racing/Back.png"
+                class="card-img-top darken-on-hover"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Komodo-NTT</h5>
+                <p class="card-text">RP 165K</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+
+    <!-- Rest of your content here -->
+
+    <script>
+      // Fetch and include the header content
+      fetch("templates/navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("headerContainer").innerHTML = html;
+        });
+      fetch("templates/footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        });
+    </script>
+  </body>
+</html>

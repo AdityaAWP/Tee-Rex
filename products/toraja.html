@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to the head of your HTML file -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-bottom: 20px;
+        font-family: "Montserrat";
+      }
+      .product {
+        padding-top: 200px;
+      }
+      .card {
+        width: 25rem;
+        border: none;
+      }
+      .full img {
+        width: 40rem;
+      }
+      .size img {
+        margin-top: 20px;
+        width: 30rem;
+      }
+      button {
+        background-color: #ee4d2d;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 2px 2px 5px black;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .material {
+        padding-top: 40px;
+      }
+      @media (max-width: 600px) {
+        .product {
+          padding-top: 130px;
+        }
+        h3 {
+          margin: 40px 0px 20px 0px;
+          text-align: center;
+        }
+        .desc {
+          text-align: center;
+          font-size: 14px;
+        }
+        .desc p {
+          text-align: left;
+        }
+        .material {
+          padding-top: 10px;
+        }
+        .card {
+          width: 20rem;
+        }
+        .full img {
+          width: 20rem;
+        }
+        .size img {
+          margin-top: 20px;
+          width: 15rem;
+        }
+      }
+      @media (min-width: 801px) and (max-width: 1021px) {
+        .card {
+          width: 20rem;
+        }
+        .full img {
+          width: 30rem;
+        }
+        .size img {
+          margin-top: 20px;
+          width: 20rem;
+        }
+      }
+    </style>
+    <!-- Add this before the closing body tag -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Tee Rex</title>
+  </head>
+  <body>
+    <div id="headerContainer"></div>
+    <div class="container product">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="">
+            <div class="card mx-auto">
+              <img
+                src="../assets/Tanatoraja_sulawesi/Backblack.png"
+                class="card-img-top"
+                alt=""
+              />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 desc">
+          <h3 class="fw-bold">Tana Toraja-Sulawesi</h3>
+          <h5>Rp 165K</h5>
+          <h6 class="fw-bold material">Material : Cotton Combed 24s</h6>
+          <h5 class="fw-bold pt-3">The Story :</h5>
+          <p>
+            The majestic silhouette of a Tongkonan house, standing tall against
+            the backdrop of Toraja's lush landscapes. The intricate carvings and
+            distinctive peaked roofs capture the essence of Toraja's
+            architectural brilliance, symbolizing a deep connection to tradition
+            and community.The color palette is inspired by the earthy tones of
+            Toraja's landscapes. Deep browns and rich greens dominate,
+            reflecting the natural surroundings and the organic materials used
+            in Tongkonan construction. The design emanates a sense of warmth and
+            cultural depth, inviting wearers to connect with the essence of
+            Toraja.
+          </p>
+
+          <button type="button">
+            <a href="https://shp.ee/7zafbjb">Shoppe</a>
+          </button>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+      <div class="row">
+        <div class="col-md-12 full text-center">
+          <img src="../assets/Tanatoraja_sulawesi/Backblack.png" alt="" />
+          <img src="../assets/Tanatoraja_sulawesi/Back.png" alt="" />
+          <img src="../assets/indonesia_elgance/Frontblack.png" alt="" />
+          <img src="../assets/indonesia_elgance/Front.png" alt="" />
+        </div>
+        <div class="col-md-12 size text-center">
+          <img src="../assets/sizechart.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <!-- Rest of your content here -->
+
+    <script>
+      // Fetch and include the header content
+      fetch("../templates/navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("headerContainer").innerHTML = html;
+        });
+      fetch("../templates/footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        });
+      //   console.log(window.scrollY);
+    </script>
+  </body>
+</html>
